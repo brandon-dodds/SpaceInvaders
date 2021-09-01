@@ -11,13 +11,13 @@ func _ready():
 #func _process(delta):
 #	pass
 
-
-func _on_Enemy_body_entered(body):
-	print("Been hit")
-	hide()
-	$CollisionShape2D.set_deferred("disabled", true)
-
 func start(pos):
 	position = pos
 	show()
 	$CollisionShape2D.disabled = false
+
+
+func _on_Enemy_area_entered(area):
+	print("Been hit")
+	hide()
+	$CollisionShape2D.set_deferred("disabled", true)

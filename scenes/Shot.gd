@@ -1,4 +1,4 @@
-extends RigidBody2D
+extends Area2D
 
 var characterShoot
 export var speed = 400

@@ -6,8 +6,7 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 4.82504, 32.3113 )
 
-[node name="Shot" type="RigidBody2D"]
-gravity_scale = 0.0
+[node name="Shot" type="Area2D"]
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_group_": true

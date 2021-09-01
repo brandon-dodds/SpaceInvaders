@@ -31,5 +31,5 @@ func start(pos):
 	$CollisionShape2D.disabled = false
 
 
-func _on_Player_body_entered(body):
+func _on_Player_area_entered(area):
 	print("INSTA DEATH")
