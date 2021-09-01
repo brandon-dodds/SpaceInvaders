@@ -6,7 +6,6 @@ signal hit
 func _ready():
 	hide()
 
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
@@ -16,8 +15,8 @@ func start(pos):
 	show()
 	$CollisionShape2D.disabled = false
 
-
-func _on_Enemy_area_entered(area):
+func _on_Enemy_area_entered(_area):
 	print("Been hit")
+	emit_signal("hit")
 	hide()
 	$CollisionShape2D.set_deferred("disabled", true)

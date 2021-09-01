@@ -21,3 +21,4 @@ position = Vector2( 640, 120 )
 [node name="Shot" parent="." instance=ExtResource( 3 )]
 
 [connection signal="playerShoot" from="Player" to="." method="_on_Player_playerShoot"]
+[connection signal="hit" from="Enemy" to="." method="_on_Enemy_hit"]
