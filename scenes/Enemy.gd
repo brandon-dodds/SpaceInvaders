@@ -1,6 +1,6 @@
 extends Area2D
 
-var speed = 150
+export var speed = 150
 var move_direction = 0
 onready var path_follow = get_parent()
 
