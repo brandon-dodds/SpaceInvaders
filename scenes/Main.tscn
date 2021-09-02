@@ -27,12 +27,13 @@ __meta__ = {
 position = Vector2( 640, 580 )
 
 [node name="Shot" parent="." instance=ExtResource( 3 )]
+speed = 500
 
 [node name="Path2D" type="Path2D" parent="."]
 curve = SubResource( 1 )
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
-position = Vector2( 85.2744, 128.98 )
+position = Vector2( 95.077, 124.868 )
 rotation = -3.88915e-06
 rotate = false
 
