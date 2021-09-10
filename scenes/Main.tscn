@@ -12,6 +12,7 @@ _data = {
 
 [node name="Main" type="Node"]
 script = ExtResource( 2 )
+theShot = ExtResource( 3 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
 margin_right = 1280.0
@@ -42,6 +43,12 @@ position = Vector2( 1.66019, -0.468246 )
 rotation = 3.88915e-06
 speed = 300
 
+[node name="ShotTimer" type="Timer" parent="."]
+wait_time = 0.5
+autostart = true
+
 [connection signal="hit" from="Player" to="." method="_on_Player_hit"]
 [connection signal="playerShoot" from="Player" to="." method="_on_Player_playerShoot"]
+[connection signal="area_entered" from="Shot" to="." method="_on_Shot_area_entered"]
 [connection signal="hit" from="Path2D/PathFollow2D/Enemy" to="." method="_on_Enemy_hit"]
+[connection signal="timeout" from="ShotTimer" to="." method="_on_ShotTimer_timeout"]

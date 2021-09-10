@@ -1,5 +1,6 @@
 extends Node
 
+export (PackedScene) var theShot 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$Player.start($PlayerStart.position)
@@ -29,3 +30,11 @@ func _on_Player_hit():
 		$Shot.hide()
 		$Shot.position = Vector2(0, 0)
 		$Player.queue_free()
+
+
+func _on_ShotTimer_timeout():
+	var shot = theShot.instance()
+	add_child(shot)
+	shot.position = $Path2D/PathFollow2D.position
+	shot.characterShoot = "enemy"
+	shot.shoot("enemy")
