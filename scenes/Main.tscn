@@ -27,9 +27,6 @@ __meta__ = {
 [node name="PlayerStart" type="Position2D" parent="."]
 position = Vector2( 640, 580 )
 
-[node name="Shot" parent="." instance=ExtResource( 3 )]
-speed = 500
-
 [node name="Path2D" type="Path2D" parent="."]
 curve = SubResource( 1 )
 
@@ -49,6 +46,5 @@ autostart = true
 
 [connection signal="hit" from="Player" to="." method="_on_Player_hit"]
 [connection signal="playerShoot" from="Player" to="." method="_on_Player_playerShoot"]
-[connection signal="area_entered" from="Shot" to="." method="_on_Shot_area_entered"]
 [connection signal="hit" from="Path2D/PathFollow2D/Enemy" to="." method="_on_Enemy_hit"]
 [connection signal="timeout" from="ShotTimer" to="." method="_on_ShotTimer_timeout"]
