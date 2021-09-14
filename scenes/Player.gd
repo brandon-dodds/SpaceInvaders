@@ -4,7 +4,6 @@ export var speed = 400
 var screen_size
 
 signal playerShoot
-signal hit
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	screen_size = get_viewport_rect().size
@@ -27,6 +26,3 @@ func start(pos):
 	position = pos
 	show()
 	$CollisionShape2D.disabled = false
-
-func _on_Player_area_entered(_area):
-	emit_signal("hit")

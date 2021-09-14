@@ -4,8 +4,6 @@ export var speed = 150
 var move_direction = 0
 onready var path_follow = get_parent()
 
-signal hit
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	hide()
@@ -17,9 +15,6 @@ func _ready():
 func start():
 	show()
 	$CollisionShape2D.disabled = false
-
-func _on_Enemy_area_entered(_area):
-	emit_signal("hit")
 
 func _physics_process(delta):
 	MovementLoop(delta)
